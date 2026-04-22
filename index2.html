@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patisserie - Delight in Every Bite</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:ital@1&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+    :root {
+    --bg-color: #f8e8e8;
+    --bg-color:#f8e8e8;
+    --accent-pink: #e29595;
+    --dark-text: #4a4a4a;
+    --gold: #b29267;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--dark-text);
+}
+
+/* --- Animations --- */
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Header --- */
+header {
+    background-color: white;
+    padding: 15px 50px;
+    border-bottom: 1px solid #eee;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 20px;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/* --- Hero --- */
+.hero {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    margin: 0;
+    font-style: italic;
+}
+
+.btn-order {
+    background-color: var(--accent-pink);
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 20px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-order:hover {
+    transform: scale(1.1);
+    background-color: #d88282;
+}
+
+.main-cake {
+    position: absolute;
+    left: 5%;
+    width: 350px;
+    border-radius: 50% 50% 0 0;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* --- Signature --- */
+.signature {
+    text-align: center;
+    padding: 100px 50px;
+}
+
+.signature h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    margin-bottom: 50px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* --- Holiday Section --- */
+.holiday {
+    background: white;
+    padding: 80px 10%;
+}
+
+.holiday-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.holiday-img-container img {
+    width: 400px;
+    border-radius: 10px;
+}
+
+.discount-box {
+    background: #fdf2f2;
+    padding: 30px;
+    font-size: 3rem;
+    font-weight: bold;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.btn-gold {
+    background-color: var(--gold);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* --- Footer --- */
+footer {
+    padding: 40px;
+    background: white;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+    font-weight: bold;
+}
+</style>
+
+</head>
+<body>
+
+    <header class="fade-in">
+        <nav>
+            <div class="nav-links">
+                <a href="#">HOME</a>
+                <a href="#">MENU</a>
+                <a href="#">CAKES</a>
+            </div>
+            <div class="logo">Patisserie</div>
+            <div class="nav-icons">
+                <span class="heart">♥</span>
+                <span class="search">🔍</span>
+                <span class="cart">🛒</span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero fade-in">
+        <div class="hero-bg-elements">
+        </div>
+        <div class="hero-content">
+            <h1>Delight in every bite!</h1>
+            <p>DESIGN TRADITION BRINGING YOU THE BEST QUALITY CAKES AND LUXURY PASTRIES</p>
+            <button class="btn-order">ORDER NOW</button>
+        </div>
+    </section>
+
+    <section class="signature">
+        <h2>Signature</h2>
+        <div class="product-grid">
+            <div class="card">
+                <div class="img-box"><img src="ulth1.png" alt="Custom Cakes"></div>
+                <h3>Custom Cakes</h3>
+                <p>Special for your moment</p>
+            </div>
+            <div class="card">
+                <div class="img-box"><img src="ulth2.png" alt="Macarons"></div>
+                <h3>Macarons</h3>
+                <p>French Sweet Delights</p>
+            </div>
+            <div class="card">
+                <div class="img-box"><img src="ulth3.png" alt="Cupcakes"></div>
+                <h3>Cupcake Collections</h3>
+                <p>Sweet and mini</p>
+            </div>
+        </div>
+    </section>
+<br>
+    <section class="holiday">
+        <div class="holiday-content">
+            <div class="holiday-img-container">
+                <img src="ulth.png">
+            </div>
+            <div class="holiday-promo">
+                <h2>Holiday Collection</h2>
+                <div class="discount-box">20% OFF</div>
+                <button class="btn-gold">ORDER TODAY</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div>NEWSLETTER</div>
+            <div>SIGN UP</div>
+            <div>FOLLOW US</div>
+            <div>ADDRESS</div>
+        </div>
+    </footer>
+
+</body>
+</html>
